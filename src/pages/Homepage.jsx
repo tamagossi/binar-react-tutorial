@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import EventIcon from '../assets/icons/event.svg';
 import RoutingIcon from '../assets/icons/routing.svg';
 import HTTPRequestIcon from '../assets/icons/http-request.svg';
+import LifeCycleIcon from '../assets/icons/lifecycle.svg';
 
 const menus = [
 	{
@@ -24,9 +25,9 @@ const menus = [
 		link: '/http-request',
 	},
 	{
-		name: 'React Lifecircle',
-		icon: HTTPRequestIcon,
-		link: '/http-request',
+		name: 'React Lifecycle',
+		icon: LifeCycleIcon,
+		link: '/react-lifecycle',
 	},
 ];
 
