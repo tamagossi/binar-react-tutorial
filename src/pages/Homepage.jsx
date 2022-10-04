@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import EventIcon from '../assets/icons/event.svg';
 import RoutingIcon from '../assets/icons/routing.svg';
+import HTTPRequestIcon from '../assets/icons/http-request.svg';
 
 const menus = [
 	{
@@ -17,18 +18,28 @@ const menus = [
 		icon: RoutingIcon,
 		link: '/routing',
 	},
+	{
+		name: 'HTTP Request',
+		icon: HTTPRequestIcon,
+		link: '/http-request',
+	},
+	{
+		name: 'React Lifecircle',
+		icon: HTTPRequestIcon,
+		link: '/http-request',
+	},
 ];
 
 const Homepage = () => {
 	return (
-		<Stack width="100vw" padding={8} spacing={4}>
+		<Stack py={8} spacing={4} maxWidth="95vw">
 			<Stack direction="row" justifyContent="center">
 				<Typography fontSize={52} fontWeight="bold" color={grey[700]}>
 					React Tutorial
 				</Typography>
 			</Stack>
 
-			<Grid container columns={24} spacing={4} justifyContent="center">
+			<Grid container columns={24} spacing={4}>
 				{menus.map(({ icon, name, link }) => {
 					return (
 						<Grid item xs={24} md={12} lg={8}>
