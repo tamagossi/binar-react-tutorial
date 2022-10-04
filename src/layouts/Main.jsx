@@ -19,11 +19,11 @@ const MainLayout = ({ title, description, image, children }) => {
 					type="button"
 					color="secondary"
 				>
-					Kembali
+					Back
 				</Button>
 
 				{image && (
-					<Stack direction="row" justifyContent="center">
+					<Stack direction="row" justifyContent="center" width="100%">
 						<img alt="header" src={image} width="50%" />
 					</Stack>
 				)}
@@ -39,7 +39,7 @@ const MainLayout = ({ title, description, image, children }) => {
 				</Stack>
 			</Stack>
 
-			<Stack mt={7} spacing={8}>
+			<Stack mt={7} spacing={4}>
 				{children}
 			</Stack>
 		</Box>

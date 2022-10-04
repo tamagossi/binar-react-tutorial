@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { Button, Card, FilledInput, Grid, TextField, Typography } from '@mui/material';
+import { Image } from 'antd';
+import { Button, Card, Grid, TextField, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Stack } from '@mui/system';
 
 import MainLayout from '../layouts/Main';
 
-import onClickImage from '../assets/images/onClick.png';
-import onChangeImage from '../assets/images/onChange.png';
-import onSubmitImage from '../assets/images/onSubmit.png';
+import onClickImage from '../assets/images/events/onClick.png';
+import onChangeImage from '../assets/images/events/onChange.png';
+import onSubmitImage from '../assets/images/events/onSubmit.png';
 
 const EventPage = () => {
 	const [value, setValue] = useState('');
@@ -67,13 +68,23 @@ const EventPage = () => {
 			description="An event is an action that could be triggered as a result of the user action or system generated event. For example, a mouse click, loading of a web page, pressing a key, window resizes, and other interactions are called events."
 			image="https://res.cloudinary.com/practicaldev/image/fetch/s--bZXXrJwH--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8uhg90p5p1x2zznc7dve.png"
 		>
+			<Stack spacing={1}>
+				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
+					Background
+				</Typography>
+
+				<Typography color={grey[500]} fontSize={16}>
+					We need DOM event to make the web interactive
+				</Typography>
+			</Stack>
+
 			<Grid container columns={24} spacing={5}>
 				{events.map(({ name, image, children }) => {
 					return (
 						<Grid item xs={26} md={12}>
-							<Card sx={{ height: 520, overflowY: 'auto' }}>
+							<Card sx={{ height: 460, overflowY: 'auto' }}>
 								<Stack alignItems="center" mb={5} spacing={2}>
-									<img
+									<Image
 										src={image}
 										alt="onClick"
 										width="100%"

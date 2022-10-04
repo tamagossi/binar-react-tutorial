@@ -1,15 +1,21 @@
 import React from 'react';
 import { Card, Grid, Stack, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
+import { Link } from 'react-router-dom';
 
 import EventIcon from '../assets/icons/event.svg';
-import { Link } from 'react-router-dom';
+import RoutingIcon from '../assets/icons/routing.svg';
 
 const menus = [
 	{
 		name: 'React Event',
 		icon: EventIcon,
 		link: '/event',
+	},
+	{
+		name: 'Routing',
+		icon: RoutingIcon,
+		link: '/routing',
 	},
 ];
 
@@ -29,7 +35,7 @@ const Homepage = () => {
 							<Link to={link}>
 								<Card raised sx={{ borderRadius: 5 }}>
 									<Stack alignItems="center" p={5}>
-										<img src={icon} alt={name} width={480} />
+										<img src={icon} alt={name} width="100%" />
 
 										<Typography
 											fontSize={24}

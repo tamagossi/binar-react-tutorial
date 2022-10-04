@@ -1,15 +1,21 @@
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Homepage from './pages/Homepage';
 import EventPage from './pages/Event';
+import RoutingPage from './pages/Routing';
+import CarDetailPage from './pages/CarDetail';
 
 function App() {
 	return (
 		<div className="App">
-			<Routes>
-				<Route path="/" element={<Homepage />} />
-				<Route path="/event" element={<EventPage />} />
-			</Routes>
+			<BrowserRouter>
+				<Routes>
+					<Route exact path="/" element={<Homepage />} />
+					<Route exact path="/event" element={<EventPage />} />
+					<Route exact path="/routing" element={<RoutingPage />} />
+					<Route exact path="/car/:id" element={<CarDetailPage />} />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }
