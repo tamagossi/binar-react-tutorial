@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AxiosExamplePage from './pages/AxiosExample';
 
+import AxiosExamplePage from './pages/AxiosExample';
 import CarDetailPage from './pages/CarDetail';
 import EventPage from './pages/Event';
 import Homepage from './pages/Homepage';

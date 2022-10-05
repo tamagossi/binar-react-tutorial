@@ -145,15 +145,13 @@ const NetworkRequestPage = () => {
 							</Typography>
 
 							<Typography>
-								<Link to="https://axios-http.com/docs/post_example">
+								<a href="https://axios-http.com/docs/post_example">
 									Post Request Example
-								</Link>
+								</a>
 							</Typography>
 
 							<Typography>
-								<Link to="https://axios-http.com/docs/api_intro">
-									API Reference
-								</Link>
+								<a href="https://axios-http.com/docs/api_intro">API Reference</a>
 							</Typography>
 						</Stack>
 					</Grid>
@@ -179,9 +177,9 @@ const NetworkRequestPage = () => {
 							</Typography>
 
 							<Typography>
-								<Link to="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">
 									HTTP Status Code
-								</Link>
+								</a>
 							</Typography>
 						</Stack>
 					</Grid>

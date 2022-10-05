@@ -18,8 +18,6 @@ const AxiosExamplePage = () => {
 		try {
 			const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
 
-			console.log(response);
-
 			setTodos(response.data);
 		} catch (error) {
 			console.error(error.message);

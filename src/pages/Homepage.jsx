@@ -7,6 +7,7 @@ import EventIcon from '../assets/icons/event.svg';
 import RoutingIcon from '../assets/icons/routing.svg';
 import HTTPRequestIcon from '../assets/icons/http-request.svg';
 import LifeCycleIcon from '../assets/icons/lifecycle.svg';
+import { defaultIconPrefixCls } from 'antd/lib/config-provider';
 
 const menus = [
 	{
