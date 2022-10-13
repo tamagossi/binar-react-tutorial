@@ -1,9 +1,8 @@
 import React from 'react';
-import { Divider, Image } from 'antd';
+import { Image } from 'antd';
 import { grey } from '@mui/material/colors';
-import { Grid, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
-import { Box, Stack } from '@mui/system';
+import { Typography } from '@mui/material';
+import { Stack } from '@mui/system';
 
 import MainLayout from '../layouts/Main';
 
