@@ -3,6 +3,7 @@ import { Card, Grid, Stack, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 
+import ContextIcon from '../assets/icons/context.svg';
 import EventIcon from '../assets/icons/event.svg';
 import RoutingIcon from '../assets/icons/routing.svg';
 import HTTPRequestIcon from '../assets/icons/http-request.svg';
@@ -34,6 +35,11 @@ const menus = [
 		name: 'State Management',
 		icon: StateManagementIcon,
 		link: '/state-management',
+	},
+	{
+		name: 'React Context API',
+		icon: ContextIcon,
+		link: '/context',
 	},
 ];
 
