@@ -4,7 +4,7 @@ import { grey } from '@mui/material/colors';
 import { Image } from 'antd';
 
 import MainLayout from '../layouts/Main';
-import OrganismReduxTodo from '../components/organisms/ReduxTodo';
+// import OrganismReduxTodo from '../components/organisms/ReduxTodo';
 
 import ActionImage from '../assets/images/redux/action.png';
 import InstallationImage from '../assets/images/redux/redux-install.png';
@@ -15,6 +15,12 @@ import StoreImage from '../assets/images/redux/store.png';
 import StoreAppSetupImage from '../assets/images/redux/store-app-setup.png';
 import TypeImage from '../assets/images/redux/type.png';
 import UsageImage from '../assets/images/redux/redux-usage.png';
+
+import ThunkActionImage from '../assets/images/redux/thunk-action.png';
+import ThunkReducerImage from '../assets/images/redux/thunk-reducer.png';
+import ThunkStoreImage from '../assets/images/redux/thunk-store.png';
+import ThunkTypeImage from '../assets/images/redux/thunk-type.png';
+import ThunkUsageImage from '../assets/images/redux/thunk-usage.png';
 
 const StateManagementPage = () => {
 	return (
@@ -190,23 +196,27 @@ const StateManagementPage = () => {
 							image: TypeImage,
 						},
 						{
-							label: '3. Initiate your reducer',
+							label: '3. Initiate your action',
+							image: ActionImage,
+						},
+						{
+							label: '4. Initiate your reducer',
 							image: ReducerImage,
 						},
 						{
-							label: '4. Combine your reducer(s)',
+							label: '5. Combine your reducer(s)',
 							image: RootReducerImage,
 						},
 						{
-							label: '5. Setup Redux',
+							label: '6. Setup Redux',
 							image: StoreImage,
 						},
 						{
-							label: '6. Setup root store to root element',
+							label: '7. Setup root store to root element',
 							image: StoreAppSetupImage,
 						},
 						{
-							label: '7. Use redux in your component',
+							label: '8. Use redux in your component',
 							image: UsageImage,
 						},
 					].map(({ label, image, imageSize }) => {
@@ -227,6 +237,95 @@ const StateManagementPage = () => {
 				</Grid>
 
 				{/* <OrganismReduxTodo /> */}
+			</Stack>
+
+			<Box height={40} />
+
+			<Stack spacing={1}>
+				<Typography color={grey[700]} fontSize={26} fontWeight="medium">
+					Redux Thunk
+				</Typography>
+
+				<Typography color={grey[500]} fontSize={16}>
+					Redux Thunk is middleware that allows you to return functions, rather than just
+					actions, within Redux. This allows for delayed actions, including working with
+					promises.
+				</Typography>
+
+				<Typography color={grey[700]} fontSize={18} fontWeight="medium">
+					Why
+				</Typography>
+
+				<Typography color={grey[500]} fontSize={16}>
+					There are several reasons why we need redux-thunk:
+					<strong>
+						<ol style={{ marginLeft: 15, marginTop: 15 }}>
+							<li>
+								Data being used in more than one component is comes from API, hence
+								instead of doing HTTP Request within component and become repeated.
+								We put HTTP Request within redux actions
+							</li>
+
+							<li>No more repeated loading state</li>
+
+							<li>Event recorded in redux debugger tool</li>
+						</ol>
+					</strong>
+				</Typography>
+
+				<Typography color={grey[700]} fontSize={18} fontWeight="medium">
+					Installation
+				</Typography>
+
+				<Typography color={grey[500]} fontSize={16}>
+					For installation, you can visit{' '}
+					<a href="https://github.com/reduxjs/redux-thunk">this website</a>
+				</Typography>
+
+				<Box height={10} />
+
+				<Typography color={grey[700]} fontSize={18} fontWeight="medium">
+					So how we integrate redux with redux-thunk?
+				</Typography>
+
+				<Grid container columns={24} spacing={2}>
+					{[
+						{
+							label: '1. Configure your store with Thunk',
+							image: ThunkStoreImage,
+						},
+						{
+							label: '2. Add type to your store types',
+							image: ThunkTypeImage,
+						},
+						{
+							label: '3. Setup your action with async function',
+							image: ThunkActionImage,
+						},
+						{
+							label: '4. Add new reducer based on type and action you have created',
+							image: ThunkReducerImage,
+						},
+						{
+							label: '5. Use in your component',
+							image: ThunkUsageImage,
+						},
+					].map(({ label, image, imageSize }) => {
+						return (
+							<Grid item xs={12}>
+								<Stack spacing={1}>
+									<Typography color={grey[500]} fontSize={16}>
+										<strong>{label}</strong>
+									</Typography>
+
+									<Image src={image} width={imageSize || '100%'} />
+								</Stack>
+							</Grid>
+						);
+					})}
+
+					<Grid item sx={12}></Grid>
+				</Grid>
 			</Stack>
 		</MainLayout>
 	);

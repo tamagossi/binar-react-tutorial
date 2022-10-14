@@ -1,29 +1,34 @@
-import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Card, Grid, Stack, Typography } from '@mui/material';
+import { Card, CircularProgress, Grid, Stack, Typography } from '@mui/material';
 
 import TODO_ACTIONS from '../../redux/actions/todo.action';
 
 const OrganismReduxTodo = () => {
 	const dispatch = useDispatch();
-	const { todos } = useSelector((state) => state.todo);
+	const { todos, fetchingTodoErrorMessage, isFetchingTodoError, isLoadingTodo } = useSelector(
+		(state) => state.todo
+	);
 
 	useEffect(() => {
 		(async () => {
-			await getTodos();
+			dispatch(TODO_ACTIONS.setTodo());
 		})();
 	}, []);
 
-	const getTodos = async () => {
-		try {
-			const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
+	if (isLoadingTodo) {
+		<Stack height="75vh" width="75vw" justifyContent="center" alignItems="center">
+			<CircularProgress />
+		</Stack>;
+	}
 
-			dispatch(TODO_ACTIONS.setTodo(response.data));
-		} catch (error) {
-			console.error(error.message);
-		}
-	};
+	if (isFetchingTodoError) {
+		return (
+			<Stack mt={7} spacing={4}>
+				<Typography>{fetchingTodoErrorMessage}</Typography>
+			</Stack>
+		);
+	}
 
 	return (
 		<Stack mt={7} spacing={4}>
