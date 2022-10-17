@@ -24,7 +24,7 @@ const todoReducer = (state = initialState, action) => {
 		case TODO_ACTION_TYPES.SET_TODO_FINISH:
 			return {
 				...state,
-				isLoadingTodo: true,
+				isLoadingTodo: false,
 			};
 		case TODO_ACTION_TYPES.SET_TODO_ERROR:
 			return {
