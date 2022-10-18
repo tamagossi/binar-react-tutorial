@@ -4,6 +4,7 @@ import { grey } from '@mui/material/colors';
 import { Image } from 'antd';
 
 import MainLayout from '../layouts/Main';
+import { AtomText, AtomTitle } from '../components/atoms';
 // import OrganismReduxTodo from '../components/organisms/ReduxTodo';
 
 import ActionImage from '../assets/images/redux/action.png';
@@ -30,9 +31,7 @@ const StateManagementPage = () => {
 			image="https://v2.vuejs.org/images/state.png"
 		>
 			<Stack spacing={1}>
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					Why?
-				</Typography>
+				<AtomTitle>Why?</AtomTitle>
 
 				<Stack direction="row" justifyContent="center" width="100%">
 					<Image
@@ -41,17 +40,15 @@ const StateManagementPage = () => {
 					/>
 				</Stack>
 
-				<Typography color={grey[500]} fontSize={16}>
+				<AtomText>
 					State Management library exist due to handle <strong>Props drilling</strong> in
 					component-based application. Props drilling is a condition where a state passed
 					to a nested children and becoming really hard to manage
-				</Typography>
+				</AtomText>
 			</Stack>
 
 			<Stack spacing={1}>
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					The difference
-				</Typography>
+				<AtomTitle>The difference</AtomTitle>
 
 				<Stack direction="row" justifyContent="center" width="100%">
 					<Image
@@ -60,21 +57,19 @@ const StateManagementPage = () => {
 					/>
 				</Stack>
 
-				<Typography color={grey[500]} fontSize={16}>
+				<AtomText>
 					With a state management, you have a centralized single source of truth state
 					center that consumed by all compoenent which need that/those state(s)
-				</Typography>
+				</AtomText>
 			</Stack>
 
 			<Stack spacing={1}>
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					The State Management Library in React
-				</Typography>
+				<AtomTitle>The State Management Library in React</AtomTitle>
 
-				<Typography color={grey[500]} fontSize={16}>
+				<AtomText>
 					In React, you can find many state management libraries, but from those state
 					managemenet library, we divide those libraries into 3 types:
-				</Typography>
+				</AtomText>
 
 				<Box height={20} />
 
@@ -114,11 +109,11 @@ const StateManagementPage = () => {
 										{title}
 									</Typography>
 
-									<Typography color={grey[500]} fontSize={16}>
+									<AtomText>
 										{description} <a href={reference}>Reference</a>
-									</Typography>
+									</AtomText>
 
-									<Typography color={grey[500]} fontSize={16}>
+									<AtomText>
 										Here is the list of state management libraries which follows
 										this pattern:
 										<ul style={{ marginLeft: 15, marginTop: 15 }}>
@@ -128,21 +123,21 @@ const StateManagementPage = () => {
 												))}
 											</strong>
 										</ul>
-									</Typography>
+									</AtomText>
 								</Stack>
 							</Grid>
 						);
 					})}
 				</Grid>
 
-				<Typography color={grey[500]} fontSize={16}>
+				<AtomText>
 					Well, other that those types, in React world, we also have another library such
 					as <strong>XState</strong>. React also comes with its own State Management,
 					which is <strong>Context API</strong>.{' '}
 					<a href="https://github.com/olegrjumin/awesome-react-state-management">
 						See the list here
 					</a>
-				</Typography>
+				</AtomText>
 			</Stack>
 
 			<Box height={20} />
@@ -168,21 +163,15 @@ const StateManagementPage = () => {
 					</Grid>
 				</Grid>
 
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					Installation
-				</Typography>
+				<AtomTitle>Installation</AtomTitle>
 
 				<Image src={InstallationImage} width="50%" />
 			</Stack>
 
 			<Stack spacing={1}>
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					Integrating Redux to your React component
-				</Typography>
+				<AtomTitle>Integrating Redux to your React component</AtomTitle>
 
-				<Typography color={grey[500]} fontSize={16}>
-					Here is the step-by-step on how to integrate Redux to React:
-				</Typography>
+				<AtomText>Here is the step-by-step on how to integrate Redux to React:</AtomText>
 
 				<Grid container columns={24} spacing={2}>
 					{[
@@ -223,9 +212,9 @@ const StateManagementPage = () => {
 						return (
 							<Grid item xs={12}>
 								<Stack spacing={1}>
-									<Typography color={grey[500]} fontSize={16}>
+									<AtomText>
 										<strong>{label}</strong>
-									</Typography>
+									</AtomText>
 
 									<Image src={image} width={imageSize || '100%'} />
 								</Stack>
@@ -246,17 +235,17 @@ const StateManagementPage = () => {
 					Redux Thunk
 				</Typography>
 
-				<Typography color={grey[500]} fontSize={16}>
+				<AtomText>
 					Redux Thunk is middleware that allows you to return functions, rather than just
 					actions, within Redux. This allows for delayed actions, including working with
 					promises.
-				</Typography>
+				</AtomText>
 
 				<Typography color={grey[700]} fontSize={18} fontWeight="medium">
 					Why
 				</Typography>
 
-				<Typography color={grey[500]} fontSize={16}>
+				<AtomText>
 					There are several reasons why we need redux-thunk:
 					<strong>
 						<ol style={{ marginLeft: 15, marginTop: 15 }}>
@@ -271,16 +260,16 @@ const StateManagementPage = () => {
 							<li>Event recorded in redux debugger tool</li>
 						</ol>
 					</strong>
-				</Typography>
+				</AtomText>
 
 				<Typography color={grey[700]} fontSize={18} fontWeight="medium">
 					Installation
 				</Typography>
 
-				<Typography color={grey[500]} fontSize={16}>
+				<AtomText>
 					For installation, you can visit{' '}
 					<a href="https://github.com/reduxjs/redux-thunk">this website</a>
-				</Typography>
+				</AtomText>
 
 				<Box height={10} />
 
@@ -314,9 +303,9 @@ const StateManagementPage = () => {
 						return (
 							<Grid item xs={12}>
 								<Stack spacing={1}>
-									<Typography color={grey[500]} fontSize={16}>
+									<AtomText>
 										<strong>{label}</strong>
-									</Typography>
+									</AtomText>
 
 									<Image src={image} width={imageSize || '100%'} />
 								</Stack>

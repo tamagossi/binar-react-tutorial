@@ -5,6 +5,7 @@ import { grey } from '@mui/material/colors';
 import { Stack } from '@mui/system';
 
 import MainLayout from '../layouts/Main';
+import { AtomText, AtomTitle } from '../components/atoms';
 
 import onClickImage from '../assets/images/events/onClick.png';
 import onChangeImage from '../assets/images/events/onChange.png';
@@ -69,13 +70,9 @@ const EventPage = () => {
 			image="https://res.cloudinary.com/practicaldev/image/fetch/s--bZXXrJwH--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8uhg90p5p1x2zznc7dve.png"
 		>
 			<Stack spacing={1}>
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					Background
-				</Typography>
+				<AtomTitle>Background</AtomTitle>
 
-				<Typography color={grey[500]} fontSize={16}>
-					We need DOM event to make the web interactive
-				</Typography>
+				<AtomText>We need DOM event to make the web interactive</AtomText>
 			</Stack>
 
 			<Grid container columns={24} spacing={5}>
@@ -110,9 +107,7 @@ const EventPage = () => {
 
 			<Card sx={{ background: grey[100] }}>
 				<Stack width="100%" spacing={1} p={3}>
-					<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-						💡 Important !!
-					</Typography>
+					<AtomTitle>💡 Important !!</AtomTitle>
 
 					<Typography color={grey[500]} fontSize={16}>
 						All event in react are passing <code>event</code> params to function we

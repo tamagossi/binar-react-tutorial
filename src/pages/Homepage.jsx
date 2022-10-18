@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 
 import ContextIcon from '../assets/icons/context.svg';
 import EventIcon from '../assets/icons/event.svg';
-import RoutingIcon from '../assets/icons/routing.svg';
 import HTTPRequestIcon from '../assets/icons/http-request.svg';
 import LifeCycleIcon from '../assets/icons/lifecycle.svg';
+import MediaHandlingIcon from '../assets/icons/media-handling.svg';
+import RoutingIcon from '../assets/icons/routing.svg';
 import StateManagementIcon from '../assets/icons/state-management.svg';
 
 const menus = [
@@ -40,6 +41,11 @@ const menus = [
 		name: 'React Context API',
 		icon: ContextIcon,
 		link: '/context',
+	},
+	{
+		name: 'Media Handling',
+		icon: MediaHandlingIcon,
+		link: '/media-handling',
 	},
 ];
 

@@ -1,3 +1,5 @@
+import 'react-dropzone-uploader/dist/styles.css';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
@@ -13,6 +15,7 @@ import NetworkRequestPage from './pages/HTTPRequest';
 import ReactLifeCyclePage from './pages/ReactLifecycle';
 import RoutingPage from './pages/Routing';
 import StateManagementPage from './pages/StateManagement';
+import MediaHandlingPage from './pages/MediaHandling';
 
 function App() {
 	return (
@@ -22,18 +25,19 @@ function App() {
 					<BrowserRouter>
 						<Routes>
 							<Route exact path="/" element={<Homepage />} />
-							<Route exact path="/event" element={<EventPage />} />
-							<Route exact path="/routing" element={<RoutingPage />} />
-							<Route exact path="/http-request" element={<NetworkRequestPage />} />
 							<Route exact path="/axios-example" element={<AxiosExamplePage />} />
-							<Route exact path="/react-lifecycle" element={<ReactLifeCyclePage />} />
 							<Route exact path="/car/:id" element={<CarDetailPage />} />
+							<Route exact path="/context" element={<ContextPage />} />
+							<Route exact path="/event" element={<EventPage />} />
+							<Route exact path="/http-request" element={<NetworkRequestPage />} />
+							<Route exact path="/media-handling" element={<MediaHandlingPage />} />
+							<Route exact path="/react-lifecycle" element={<ReactLifeCyclePage />} />
+							<Route exact path="/routing" element={<RoutingPage />} />
 							<Route
 								exact
 								path="/state-management"
 								element={<StateManagementPage />}
 							/>
-							<Route exact path="/context" element={<ContextPage />} />
 						</Routes>
 					</BrowserRouter>
 				</LanguageProvider>

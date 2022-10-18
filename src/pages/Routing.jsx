@@ -5,6 +5,7 @@ import { grey } from '@mui/material/colors';
 import { Stack } from '@mui/system';
 
 import MainLayout from '../layouts/Main';
+import { AtomText, AtomTitle } from '../components/atoms';
 
 import InstallationImage from '../assets/images/routing/installation.png';
 import RoutingConfigJSXImage from '../assets/images/routing/routing-config-jsx.png';
@@ -23,9 +24,7 @@ const RoutingPage = () => {
 			image="https://www.loginradius.com/blog/static/a53096b6796dd3d1e3f3df8bc77a6689/03979/index.png"
 		>
 			<Stack spacing={1}>
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					Background
-				</Typography>
+				<AtomTitle>Background</AtomTitle>
 
 				<Stack direction="row" justifyContent="center" width="100%">
 					<Image
@@ -34,18 +33,16 @@ const RoutingPage = () => {
 					/>
 				</Stack>
 
-				<Typography color={grey[500]} fontSize={16}>
+				<AtomText>
 					Since React is CSR library, we can't access page by requesting to the server. So
 					we need some library to handle url changes to render certain view
-				</Typography>
+				</AtomText>
 			</Stack>
 
 			<Divider />
 
 			<Stack spacing={1}>
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					Installation
-				</Typography>
+				<AtomTitle>Installation</AtomTitle>
 
 				<Image src={InstallationImage} width="50%" />
 			</Stack>
@@ -53,9 +50,7 @@ const RoutingPage = () => {
 			<Divider />
 
 			<Stack spacing={2}>
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					Basic Usage / Common API Usage
-				</Typography>
+				<AtomTitle>Basic Usage / Common API Usage</AtomTitle>
 
 				<Stack spacing={1}>
 					<Typography color={grey[700]} fontSize={16} fontWeight="bold">

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Image } from 'antd';
-import { grey } from '@mui/material/colors';
 import { Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 
 import MainLayout from '../layouts/Main';
+import { AtomTitle } from '../components/atoms';
 
 const ReactLifeCyclePage = () => {
 	return (
@@ -14,9 +14,7 @@ const ReactLifeCyclePage = () => {
 			image="https://cdn-media-1.freecodecamp.org/images/1*_drMYY_IEgboMS4RhvC-lQ.png"
 		>
 			<Stack spacing={1}>
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					A Event flow in React
-				</Typography>
+				<AtomTitle>A Event flow in React</AtomTitle>
 
 				<Stack direction="row" justifyContent="center" width="100%">
 					<Image

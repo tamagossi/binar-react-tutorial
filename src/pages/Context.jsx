@@ -1,10 +1,9 @@
-import { Grid, Stack, Typography } from '@mui/material';
-import { grey } from '@mui/material/colors';
+import { Grid, Stack } from '@mui/material';
 import { Image } from 'antd';
 import React from 'react';
 
 import MainLayout from '../layouts/Main';
-import { AtomLanguageSwitcher } from '../components/atoms';
+import { AtomLanguageSwitcher, AtomText, AtomTitle } from '../components/atoms';
 
 import ContextHooksImage from '../assets/images/context/context-hooks.png';
 import ContextRegisterImage from '../assets/images/context/context-register.png';
@@ -19,16 +18,14 @@ const ContextPage = () => {
 			image="https://www.loginradius.com/blog/static/157af7ff069ab273224b4718433d9790/03979/title-image.png"
 		>
 			<Stack spacing={1}>
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					Integrating Context API to your React component
-				</Typography>
+				<AtomTitle>Integrating Context API to your React component</AtomTitle>
 
-				<Typography color={grey[500]} fontSize={16}>
+				<AtomText>
 					Here is the step-by-step on how to integrate Redux to React, First thing first,
 					you need to provide <strong>2 folders</strong> within{' '}
 					<strong>src folder</strong>, <strong>contexts</strong> folder and{' '}
 					<strong>hooks</strong> folder.
-				</Typography>
+				</AtomText>
 
 				<Grid container columns={24} spacing={2}>
 					{[
@@ -52,9 +49,9 @@ const ContextPage = () => {
 						return (
 							<Grid item xs={12}>
 								<Stack spacing={1}>
-									<Typography color={grey[500]} fontSize={16}>
+									<AtomText>
 										<strong>{label}</strong>
-									</Typography>
+									</AtomText>
 
 									<Image src={image} width={imageSize || '100%'} />
 								</Stack>
@@ -65,9 +62,7 @@ const ContextPage = () => {
 					<Grid item sx={12}></Grid>
 				</Grid>
 
-				<Typography color={grey[700]} fontSize={22} fontWeight="medium">
-					Context Example:
-				</Typography>
+				<AtomTitle>Context Example:</AtomTitle>
 
 				<AtomLanguageSwitcher />
 			</Stack>
