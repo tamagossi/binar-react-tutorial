@@ -1,10 +1,9 @@
 import React from 'react';
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
-import { Image } from 'antd';
 
 import MainLayout from '../layouts/Main';
-import { AtomText, AtomTitle } from '../components/atoms';
+import { AtomImage, AtomText, AtomTitle } from '../components/atoms';
 // import OrganismReduxTodo from '../components/organisms/ReduxTodo';
 
 import ActionImage from '../assets/images/redux/action.png';
@@ -34,7 +33,7 @@ const StateManagementPage = () => {
 				<AtomTitle>Why?</AtomTitle>
 
 				<Stack direction="row" justifyContent="center" width="100%">
-					<Image
+					<AtomImage
 						src="https://christiankohler.net/static/e23cc4a6c42df7ff0e07afdc3080ace5/8e47a/PropDrilling.png"
 						width="50%"
 					/>
@@ -51,7 +50,7 @@ const StateManagementPage = () => {
 				<AtomTitle>The difference</AtomTitle>
 
 				<Stack direction="row" justifyContent="center" width="100%">
-					<Image
+					<AtomImage
 						src="https://css-tricks.com/wp-content/uploads/2016/03/redux-article-3-03.svg"
 						width="50%"
 					/>
@@ -149,14 +148,14 @@ const StateManagementPage = () => {
 
 				<Grid container columns={24}>
 					<Grid item xs={12}>
-						<Image
+						<AtomImage
 							src="https://d33wubrfki0l68.cloudfront.net/01cc198232551a7e180f4e9e327b5ab22d9d14e7/b33f4/assets/images/reduxdataflowdiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif"
 							width="100%"
 						/>
 					</Grid>
 
 					<Grid item xs={12}>
-						<Image
+						<AtomImage
 							src="https://res.cloudinary.com/practicaldev/image/fetch/s--m5BdPzhS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.imgur.com/riadAin.gif"
 							width="100%"
 						/>
@@ -165,7 +164,7 @@ const StateManagementPage = () => {
 
 				<AtomTitle>Installation</AtomTitle>
 
-				<Image src={InstallationImage} width="50%" />
+				<AtomImage src={InstallationImage} width="50%" />
 			</Stack>
 
 			<Stack spacing={1}>
@@ -216,7 +215,7 @@ const StateManagementPage = () => {
 										<strong>{label}</strong>
 									</AtomText>
 
-									<Image src={image} width={imageSize || '100%'} />
+									<AtomImage src={image} width={imageSize || '100%'} />
 								</Stack>
 							</Grid>
 						);
@@ -307,7 +306,7 @@ const StateManagementPage = () => {
 										<strong>{label}</strong>
 									</AtomText>
 
-									<Image src={image} width={imageSize || '100%'} />
+									<AtomImage src={image} width={imageSize || '100%'} />
 								</Stack>
 							</Grid>
 						);

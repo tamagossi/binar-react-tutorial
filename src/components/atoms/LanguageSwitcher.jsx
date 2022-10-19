@@ -1,5 +1,6 @@
 import React from 'react';
 import { Stack, Switch, Typography } from '@mui/material';
+
 import useLanguage from '../../hooks/useLanguage';
 
 const AtomLanguageSwitcher = () => {

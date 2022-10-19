@@ -1,10 +1,8 @@
 import React from 'react';
-import { Image } from 'antd';
-import { Typography } from '@mui/material';
-import { Stack } from '@mui/system';
+import { Stack, Typography } from '@mui/material';
 
 import MainLayout from '../layouts/Main';
-import { AtomTitle } from '../components/atoms';
+import { AtomImage, AtomTitle } from '../components/atoms';
 
 const ReactLifeCyclePage = () => {
 	return (
@@ -17,7 +15,7 @@ const ReactLifeCyclePage = () => {
 				<AtomTitle>A Event flow in React</AtomTitle>
 
 				<Stack direction="row" justifyContent="center" width="100%">
-					<Image
+					<AtomImage
 						src="https://i2.wp.com/programmingwithmosh.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-31-at-1.44.28-PM.png?ssl=1"
 						width="80%"
 					/>

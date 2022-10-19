@@ -1,9 +1,8 @@
 import { Grid, Stack } from '@mui/material';
-import { Image } from 'antd';
 import React from 'react';
 
 import MainLayout from '../layouts/Main';
-import { AtomLanguageSwitcher, AtomText, AtomTitle } from '../components/atoms';
+import { AtomImage, AtomLanguageSwitcher, AtomText, AtomTitle } from '../components/atoms';
 
 import ContextHooksImage from '../assets/images/context/context-hooks.png';
 import ContextRegisterImage from '../assets/images/context/context-register.png';
@@ -53,7 +52,7 @@ const ContextPage = () => {
 										<strong>{label}</strong>
 									</AtomText>
 
-									<Image src={image} width={imageSize || '100%'} />
+									<AtomImage src={image} width={imageSize || '100%'} />
 								</Stack>
 							</Grid>
 						);

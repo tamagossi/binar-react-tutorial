@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Image } from 'antd';
 import { Button, Card, Grid, TextField, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Stack } from '@mui/system';
 
 import MainLayout from '../layouts/Main';
-import { AtomText, AtomTitle } from '../components/atoms';
+import { AtomImage, AtomText, AtomTitle } from '../components/atoms';
 
 import onClickImage from '../assets/images/events/onClick.png';
 import onChangeImage from '../assets/images/events/onChange.png';
@@ -81,7 +80,7 @@ const EventPage = () => {
 						<Grid item xs={26} md={12}>
 							<Card sx={{ height: 460, overflowY: 'auto' }}>
 								<Stack alignItems="center" mb={5} spacing={2}>
-									<Image
+									<AtomImage
 										src={image}
 										alt="onClick"
 										width="100%"

@@ -1,11 +1,9 @@
 import React from 'react';
-import { Divider, Image } from 'antd';
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, Divider, Stack, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { Box, Stack } from '@mui/system';
 
 import MainLayout from '../layouts/Main';
-import { AtomText, AtomTitle } from '../components/atoms';
+import { AtomImage, AtomText, AtomTitle } from '../components/atoms';
 
 import AxiosBasicUsageImage from '../assets/images/http/basic-usage.png';
 import AxiosResponseImage from '../assets/images/http/response.png';
@@ -23,7 +21,7 @@ const NetworkRequestPage = () => {
 				<AtomTitle>A Brief</AtomTitle>
 
 				<Stack direction="row" justifyContent="center" width="100%">
-					<Image
+					<AtomImage
 						src="https://bacabagus101.files.wordpress.com/2018/12/download-5.png"
 						width="50%"
 					/>
@@ -62,7 +60,7 @@ const NetworkRequestPage = () => {
 				</AtomText>
 
 				<Stack direction="row" justifyContent="center">
-					<Image src={NativeFetchImage} width="50%" />
+					<AtomImage src={NativeFetchImage} width="50%" />
 				</Stack>
 			</Stack>
 
@@ -101,7 +99,7 @@ const NetworkRequestPage = () => {
 
 				<AtomTitle>Installation</AtomTitle>
 
-				<Image src={InstallationImage} width="50%" />
+				<AtomImage src={InstallationImage} width="50%" />
 			</Stack>
 
 			<Divider />
@@ -111,7 +109,7 @@ const NetworkRequestPage = () => {
 
 				<Grid container columns={24} spacing={10}>
 					<Grid xs={24} lg={12}>
-						<Image src={AxiosBasicUsageImage} width="95%" />
+						<AtomImage src={AxiosBasicUsageImage} width="95%" />
 					</Grid>
 
 					<Grid xs={24} lg={12}>
@@ -145,7 +143,7 @@ const NetworkRequestPage = () => {
 
 				<Grid container columns={24} spacing={10}>
 					<Grid xs={24} lg={12}>
-						<Image src={AxiosResponseImage} width="95%" />
+						<AtomImage src={AxiosResponseImage} width="95%" />
 					</Grid>
 
 					<Grid xs={24} lg={12}>

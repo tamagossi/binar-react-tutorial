@@ -1,11 +1,9 @@
 import React from 'react';
-import { Divider, Image } from 'antd';
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, Divider, Stack } from '@mui/material';
 import { grey } from '@mui/material/colors';
-import { Stack } from '@mui/system';
 
 import MainLayout from '../layouts/Main';
-import { AtomText, AtomTitle } from '../components/atoms';
+import { AtomImage, AtomText, AtomTitle } from '../components/atoms';
 
 import InstallationImage from '../assets/images/routing/installation.png';
 import RoutingConfigJSXImage from '../assets/images/routing/routing-config-jsx.png';
@@ -27,7 +25,7 @@ const RoutingPage = () => {
 				<AtomTitle>Background</AtomTitle>
 
 				<Stack direction="row" justifyContent="center" width="100%">
-					<Image
+					<AtomImage
 						src="https://www.edureka.co/blog/wp-content/uploads/2017/09/routing_blog.png"
 						width="50%"
 					/>
@@ -44,7 +42,7 @@ const RoutingPage = () => {
 			<Stack spacing={1}>
 				<AtomTitle>Installation</AtomTitle>
 
-				<Image src={InstallationImage} width="50%" />
+				<AtomImage src={InstallationImage} width="50%" />
 			</Stack>
 
 			<Divider />
@@ -59,11 +57,11 @@ const RoutingPage = () => {
 
 					<Grid container columns={24} spacing={10}>
 						<Grid xs={24} lg={12}>
-							<Image src={RoutingConfigArrayImage} width="95%" />
+							<AtomImage src={RoutingConfigArrayImage} width="95%" />
 						</Grid>
 
 						<Grid xs={24} lg={12}>
-							<Image src={RoutingConfigJSXImage} width="95%" />
+							<AtomImage src={RoutingConfigJSXImage} width="95%" />
 						</Grid>
 					</Grid>
 				</Stack>
@@ -76,7 +74,7 @@ const RoutingPage = () => {
 					<Grid container columns={24} spacing={10}>
 						<Grid xs={24} lg={12}>
 							<Stack spacing={1}>
-								<Image src={RoutingNavigateImage} width="95%" />
+								<AtomImage src={RoutingNavigateImage} width="95%" />
 
 								<Typography>
 									<a href="https://reactrouter.com/en/v6.3.0/api#link">
@@ -88,7 +86,7 @@ const RoutingPage = () => {
 
 						<Grid xs={24} lg={12}>
 							<Stack spacing={1}>
-								<Image src={RoutingLinkImage} width="95%" />
+								<AtomImage src={RoutingLinkImage} width="95%" />
 
 								<Typography>
 									<a href="https://reactrouter.com/en/v6.3.0/api#usenavigate">
@@ -110,7 +108,7 @@ const RoutingPage = () => {
 					<Grid container columns={24} spacing={10}>
 						<Grid xs={24} lg={12}>
 							<Stack spacing={1}>
-								<Image src={RoutingParamConfigImage} width="95%" />
+								<AtomImage src={RoutingParamConfigImage} width="95%" />
 
 								<Typography>
 									<a href="https://reactrouter.com/en/v6.3.0/api#useparams">
@@ -121,7 +119,7 @@ const RoutingPage = () => {
 						</Grid>
 
 						<Grid xs={24} lg={12}>
-							<Image src={RoutingParamUsageImage} width="95%" />
+							<AtomImage src={RoutingParamUsageImage} width="95%" />
 						</Grid>
 					</Grid>
 				</Stack>
@@ -135,7 +133,7 @@ const RoutingPage = () => {
 
 					<Grid container columns={24} spacing={10}>
 						<Grid xs={24} lg={12}>
-							<Image src={RoutingQueryUsageImage} width="95%" />
+							<AtomImage src={RoutingQueryUsageImage} width="95%" />
 						</Grid>
 					</Grid>
 				</Stack>

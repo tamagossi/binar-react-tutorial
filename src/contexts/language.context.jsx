@@ -3,17 +3,14 @@ import React, { useMemo, useState, createContext } from 'react';
 
 export const LanguageContext = createContext({});
 
-const LanguageProvider = ({ children }) => {
+const LanguageProvider = (props) => {
 	const [language, setLanguage] = useState('indonesia');
 
-	const contextValues = useMemo(() => {
-		return {
-			setLanguage,
-			language,
-		};
-	}, [language]);
+	const contextValues = { setLanguage, language };
 
-	return <LanguageContext.Provider value={contextValues}>{children}</LanguageContext.Provider>;
+	return (
+		<LanguageContext.Provider value={contextValues}>{props.children}</LanguageContext.Provider>
+	);
 };
 
 export default LanguageProvider;
