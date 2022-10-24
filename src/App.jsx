@@ -11,11 +11,12 @@ import CarDetailPage from './pages/CarDetail';
 import ContextPage from './pages/Context';
 import EventPage from './pages/Event';
 import Homepage from './pages/Homepage';
+import MediaHandlingPage from './pages/MediaHandling';
 import NetworkRequestPage from './pages/HTTPRequest';
 import ReactLifeCyclePage from './pages/ReactLifecycle';
 import RoutingPage from './pages/Routing';
 import StateManagementPage from './pages/StateManagement';
-import MediaHandlingPage from './pages/MediaHandling';
+import StoragePage from './pages/Storage';
 
 function App() {
 	return (
@@ -33,6 +34,7 @@ function App() {
 							<Route exact path="/media-handling" element={<MediaHandlingPage />} />
 							<Route exact path="/react-lifecycle" element={<ReactLifeCyclePage />} />
 							<Route exact path="/routing" element={<RoutingPage />} />
+							<Route exact path="/storage" element={<StoragePage />} />
 							<Route
 								exact
 								path="/state-management"

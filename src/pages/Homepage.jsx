@@ -10,6 +10,7 @@ import LifeCycleIcon from '../assets/icons/lifecycle.svg';
 import MediaHandlingIcon from '../assets/icons/media-handling.svg';
 import RoutingIcon from '../assets/icons/routing.svg';
 import StateManagementIcon from '../assets/icons/state-management.svg';
+import WebStorageIcon from '../assets/icons/storage.svg';
 
 const menus = [
 	{
@@ -46,6 +47,11 @@ const menus = [
 		name: 'Media Handling',
 		icon: MediaHandlingIcon,
 		link: '/media-handling',
+	},
+	{
+		name: 'Web Storage',
+		icon: WebStorageIcon,
+		link: '/storage',
 	},
 ];
 
