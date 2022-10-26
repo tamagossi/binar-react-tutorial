@@ -11,6 +11,7 @@ import MediaHandlingIcon from '../assets/icons/media-handling.svg';
 import RoutingIcon from '../assets/icons/routing.svg';
 import StateManagementIcon from '../assets/icons/state-management.svg';
 import WebStorageIcon from '../assets/icons/storage.svg';
+import TestingIcon from '../assets/icons/testing.svg';
 
 const menus = [
 	{
@@ -52,6 +53,11 @@ const menus = [
 		name: 'Web Storage',
 		icon: WebStorageIcon,
 		link: '/storage',
+	},
+	{
+		name: 'Testing',
+		icon: TestingIcon,
+		link: '/testing',
 	},
 ];
 

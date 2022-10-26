@@ -1,8 +1,8 @@
+import { Image } from 'antd';
 import React from 'react';
-import Image from 'react-modal-image';
 
 const AtomReactImage = ({ src, ...rest }) => {
-	return <Image small={src} large={src} />;
+	return <Image src={src} {...rest} />;
 };
 
 export default AtomReactImage;

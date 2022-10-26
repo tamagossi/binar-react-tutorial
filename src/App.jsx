@@ -17,6 +17,7 @@ import ReactLifeCyclePage from './pages/ReactLifecycle';
 import RoutingPage from './pages/Routing';
 import StateManagementPage from './pages/StateManagement';
 import StoragePage from './pages/Storage';
+import TestingPage from './pages/Testing';
 
 function App() {
 	return (
@@ -40,6 +41,7 @@ function App() {
 								path="/state-management"
 								element={<StateManagementPage />}
 							/>
+							<Route exact path="/testing" element={<TestingPage />} />
 						</Routes>
 					</BrowserRouter>
 				</LanguageProvider>
