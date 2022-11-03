@@ -89,7 +89,7 @@ const TestingPage = () => {
 					<AtomImage src={JestInstallImage} alt="Jest" width="40%" />
 				</Stack>
 
-				<AtomTitle fontSize={18}>Jest Methods and Usage</AtomTitle>
+				<AtomTitle fontSize={18}>Jest Methods</AtomTitle>
 
 				<Stack justifyContent="center" alignItems="center" spacing={2}>
 					<AtomImage src={JestMethodImage} alt="Jest" width="40%" />

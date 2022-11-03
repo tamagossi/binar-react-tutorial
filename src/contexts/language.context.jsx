@@ -6,7 +6,13 @@ export const LanguageContext = createContext({});
 const LanguageProvider = (props) => {
 	const [language, setLanguage] = useState('indonesia');
 
-	const contextValues = { setLanguage, language };
+	const contextValues = useMemo(
+		() => ({
+			setLanguage,
+			language,
+		}),
+		[language]
+	);
 
 	return (
 		<LanguageContext.Provider value={contextValues}>{props.children}</LanguageContext.Provider>
