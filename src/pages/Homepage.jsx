@@ -3,6 +3,7 @@ import { Card, Grid, Stack, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 
+import AuthenticationIcon from '../assets/icons/authentication.svg';
 import ContextIcon from '../assets/icons/context.svg';
 import EventIcon from '../assets/icons/event.svg';
 import HTTPRequestIcon from '../assets/icons/http-request.svg';
@@ -58,6 +59,11 @@ const menus = [
 		name: 'Testing',
 		icon: TestingIcon,
 		link: '/testing',
+	},
+	{
+		name: 'Authentication',
+		icon: AuthenticationIcon,
+		link: '/authentication',
 	},
 ];
 

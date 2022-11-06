@@ -18,6 +18,7 @@ import RoutingPage from './pages/Routing';
 import StateManagementPage from './pages/StateManagement';
 import StoragePage from './pages/Storage';
 import TestingPage from './pages/Testing';
+import AuthenticationPage from './pages/Authentication';
 
 function App() {
 	return (
@@ -27,6 +28,7 @@ function App() {
 					<BrowserRouter>
 						<Routes>
 							<Route exact path="/" element={<Homepage />} />
+							<Route exact path="/authentication" element={<AuthenticationPage />} />
 							<Route exact path="/axios-example" element={<AxiosExamplePage />} />
 							<Route exact path="/car/:id" element={<CarDetailPage />} />
 							<Route exact path="/context" element={<ContextPage />} />
