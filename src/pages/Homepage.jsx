@@ -65,6 +65,11 @@ const menus = [
 		icon: AuthenticationIcon,
 		link: '/authentication',
 	},
+	{
+		name: 'OAuth',
+		icon: AuthenticationIcon,
+		link: '/oauth',
+	},
 ];
 
 const Homepage = () => {

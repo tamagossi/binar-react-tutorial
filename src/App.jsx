@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import store from './redux/index';
 import LanguageProvider from './contexts/language.context';
 
+import AuthenticationPage from './pages/Authentication';
 import AxiosExamplePage from './pages/AxiosExample';
 import CarDetailPage from './pages/CarDetail';
 import ContextPage from './pages/Context';
@@ -13,12 +14,12 @@ import EventPage from './pages/Event';
 import Homepage from './pages/Homepage';
 import MediaHandlingPage from './pages/MediaHandling';
 import NetworkRequestPage from './pages/HTTPRequest';
+import OAuthPage from './pages/OAuth';
 import ReactLifeCyclePage from './pages/ReactLifecycle';
 import RoutingPage from './pages/Routing';
 import StateManagementPage from './pages/StateManagement';
 import StoragePage from './pages/Storage';
 import TestingPage from './pages/Testing';
-import AuthenticationPage from './pages/Authentication';
 
 function App() {
 	return (
@@ -35,15 +36,16 @@ function App() {
 							<Route exact path="/event" element={<EventPage />} />
 							<Route exact path="/http-request" element={<NetworkRequestPage />} />
 							<Route exact path="/media-handling" element={<MediaHandlingPage />} />
+							<Route exact path="/oauth" element={<OAuthPage />} />
 							<Route exact path="/react-lifecycle" element={<ReactLifeCyclePage />} />
 							<Route exact path="/routing" element={<RoutingPage />} />
 							<Route exact path="/storage" element={<StoragePage />} />
+							<Route exact path="/testing" element={<TestingPage />} />
 							<Route
 								exact
 								path="/state-management"
 								element={<StateManagementPage />}
 							/>
-							<Route exact path="/testing" element={<TestingPage />} />
 						</Routes>
 					</BrowserRouter>
 				</LanguageProvider>

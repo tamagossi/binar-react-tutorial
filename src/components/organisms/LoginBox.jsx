@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom';
 
 import { EmailOutlined, PasswordOutlined, Visibility, VisibilityOff } from '@mui/icons-material';
@@ -97,6 +98,24 @@ const OrganismLoginBox = () => {
 						</Button>
 					</Stack>
 				</form>
+
+				<Stack direction="row" justifyContent="center">
+					<Stack>
+						<Typography fontWeight={500}>or</Typography>
+					</Stack>
+				</Stack>
+
+				<Stack direction="row" justifyContent="center">
+					<GoogleLogin
+						accessType="online"
+						disabled={false}
+						clientId="558112081248-fvjcb9o44tbbf32ofij1ueqrj3bsb0em.apps.googleusercontent.com"
+						onSuccess={(response) => console.log(response)}
+						onFailure={(response) => console.log(response)}
+						cookiePolicy="single_host_origin"
+						buttonText="Login with Google"
+					/>
+				</Stack>
 			</Stack>
 		</Card>
 	);
